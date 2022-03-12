@@ -35,6 +35,9 @@ public class Dealer extends Player {
 	 * for (int i = 1; i < getHand().size(); i++) { dealersMinusOne +=
 	 * dealersH.getHand().get(i).getValue();
 	 * 
+	 * sysout ("dealers gethand.get(2) + gethand.get(2).getValue())
+	 *  
+	 * 
 	 * } return dealersMinusOne; }
 	 * 
 	 * public void printOutDealersHand() { for (int i = 1; i <
