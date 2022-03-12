@@ -63,6 +63,7 @@ public class BlackJackApp {
 				System.out.println(
 						"You have chosen to hit. The value of your hand is now: " + player.valueOfPlayersCards());
 				System.out.println("The value of the Dealers hand is: " + dealer.valueOfDealersHand());
+				dealersTurn();
 			}
 			if (player.valueOfPlayersCards() > 21) {
 				System.out.println("Busted. You lose. ");
@@ -74,16 +75,17 @@ public class BlackJackApp {
 				System.out.println("The value of the dealers hand is: " + dealer.valueOfDealersHand());
 				System.out.println("You have chosen to stay. The value of your hand is: " + player.valueOfPlayersCards());
 				player.cardsInHand();
-				dealersTurn();
+				 dealersTurn();
+				break;
 			}
 		}
 	}
 
 	public void dealersTurn() {
 		while (dealer.valueOfDealersHand() < 17) {
-			dealer.dealCard(player);
+			dealer.dealCard(dealer);
 			if (dealer.valueOfDealersHand() > 21) {
-				System.out.println("Dealer has busted, player wins!");
+				System.out.println("Dealer has drawn a new card and Dealer has busted, player wins!");
 			}
 			if (dealer.valueOfDealersHand() == 21) {
 				System.out.println("Dealer has BlackJack!");
@@ -117,45 +119,12 @@ public class BlackJackApp {
 				System.out.println("Invalid input, please enter a valid input.");
 				results();
 			}
+			//results();
 		}
 		
 		public void endGame() {
+			 enterLoop = false;
 			System.out.println("You've chosen to quit, have a great day!");
-			enterLoop = false;
 		}
 }
 
-/*
- * ask the player, hit or stay? if player hits, deal card to player if player
- * stays: dealer actions are now -- if over 17, stay, if under 17, hit, if over
- * 21, bust.
- */
-
-// 1 to deal card while valuePhand <21
-// 2 to stay and exit the loop
-
-//		// dealer.valueMinusOne();
-//		dealer.cardsInHand();
-//		if (dealer.valueOfDealersHand() > player.valueOfPlayersCards() && dealer.valueOfDealersHand() < 21) {
-//			System.out.println("Dealer Wins!");
-//		} else {
-//			System.out.println("You win!");
-//		}
-//		System.out.println("Would you like to play again?");
-//		System.out.println("Press 1 for yes");
-//		System.out.println("Press 2 for no");
-//		input = sc.nextInt();
-//		sc.nextLine();
-//		switch (input) {
-//		case 1:
-//			System.out.println("You have chosen to continue to play. . . ");
-//			player.clearHand();
-//			dealer.clearHand();
-//			break;
-//		case 2:
-//			System.out.println("Thanks for playing!");
-//			enterLoop = false;
-//			break;
-//		default:
-//			System.out.println("Invalid option -- please try again");
-//			break;
