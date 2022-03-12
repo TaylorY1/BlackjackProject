@@ -1,8 +1,9 @@
 package com.skilldistillery.cards.common;
 
+import com.skilldistillery.cards.blackjack.BlackJackHand;
+
 public class Dealer extends Player {
 	private Deck deck = new Deck();
-	// what does a dealer have?
 
 	// needs to have a deck
 	public void shuffleDeck() {
@@ -14,13 +15,36 @@ public class Dealer extends Player {
 
 		Card card = deck.dealCard();
 		player.addCardToHand(card);
-
+		
 	}
 	
-	// boolean 
-	//
-	// order of action !!!
-  // do while loop with >= 17 && <= 21;
-	// method is what dealer does
+	public int valueOfDealersHand() {
+		
+		return valueOfPlayersCards();
+		
+		// need to find out how to hide one card
+	}
+	
+	public void cardsInHand() {
+			super.cardsInHand();
+	}
+	
+	/*
+	 * public int valueMinusOne() { int dealersMinusOne = 0;
+	 * 
+	 * for (int i = 1; i < getHand().size(); i++) { dealersMinusOne +=
+	 * dealersH.getHand().get(i).getValue();
+	 * 
+	 * } return dealersMinusOne; }
+	 * 
+	 * public void printOutDealersHand() { for (int i = 1; i <
+	 * dealersH.getHand().size(); i++) { System.out.println(getHand().get(i));
+	 * 
+	 * }
+	 * 
+	 * 
+	 * }
+	 */
+
 
 }
