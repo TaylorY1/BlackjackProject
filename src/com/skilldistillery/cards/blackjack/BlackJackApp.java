@@ -12,6 +12,7 @@ public class BlackJackApp {
 	private Player player = new Player();
 	private Deck deck = new Deck();
 	Scanner sc = new Scanner(System.in);
+	boolean enterLoop = true;
 
 	public static void main(String[] args) {
 		BlackJackApp blackJackApp = new BlackJackApp();
@@ -19,7 +20,6 @@ public class BlackJackApp {
 	}
 
 	public void playBlackJack() {
-		boolean enterLoop = true;
 		System.out.println("Welcome to BlackJack! Lets get ready to play. . . ");
 		System.out.println("Shuffling cards and dealing now");
 		 while (enterLoop) {
@@ -66,16 +66,15 @@ public class BlackJackApp {
 			}
 			if (player.valueOfPlayersCards() > 21) {
 				System.out.println("Busted. You lose. ");
-				
+				results();
 			}
 			if (input == 2) {
 				System.out.println("The dealers cards are: ");
 				dealer.cardsInHand();
 				System.out.println("The value of the dealers hand is: " + dealer.valueOfDealersHand());
-				System.out
-						.println("You have chosen to stay. The value of your hand is: " + player.valueOfPlayersCards());
-				player.valueOfPlayersCards();
-				break;
+				System.out.println("You have chosen to stay. The value of your hand is: " + player.valueOfPlayersCards());
+				player.cardsInHand();
+				dealersTurn();
 			}
 		}
 	}
@@ -112,6 +111,7 @@ public class BlackJackApp {
 				dealer.clearHand();
 				playBlackJack();
 			} else if (input == 2) {
+			
 				endGame();
 			}else {
 				System.out.println("Invalid input, please enter a valid input.");
@@ -121,8 +121,7 @@ public class BlackJackApp {
 		
 		public void endGame() {
 			System.out.println("You've chosen to quit, have a great day!");
-			
-			
+			enterLoop = false;
 		}
 }
 
