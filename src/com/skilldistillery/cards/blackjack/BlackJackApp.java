@@ -1,3 +1,4 @@
+
 package com.skilldistillery.cards.blackjack;
 
 import java.util.Iterator;
@@ -22,16 +23,16 @@ public class BlackJackApp {
 	public void playBlackJack() {
 		System.out.println("Welcome to BlackJack! Lets get ready to play. . . ");
 		System.out.println("Shuffling cards and dealing now");
-		 while (enterLoop) {
-		dealer.shuffleDeck();
-		for (int i = 0; i < 2; i++) {
-			dealer.dealCard(player);
-			dealer.dealCard(dealer);
+		while (enterLoop) {
+			dealer.shuffleDeck();
+			for (int i = 0; i < 2; i++) {
+				dealer.dealCard(player);
+				dealer.dealCard(dealer);
+			}
+			playersTurn();
+			dealersTurn();
+			results();
 		}
-		playersTurn();
-		dealersTurn();
-		results();
-	}
 	}
 
 	public void playersTurn() {
@@ -42,9 +43,9 @@ public class BlackJackApp {
 			System.out.println("BLACKJACK! You win!");
 			// move this to before you hit or stay
 		}
-		System.out.println("The value of your hand is: " + player.valueOfPlayersCards()); 
+		System.out.println("The value of your hand is: " + player.valueOfPlayersCards());
 		System.out.println("The value of the Dealers hand is: " + dealer.valueOfDealersHand());
-		System.out.println("and his card is: "); 
+		System.out.println("and his card is: ");
 		dealer.cardsInHand();// display dealers card
 		if (player.valueOfPlayersCards() > 21) {
 			System.out.println("You've busted! You lost");
@@ -67,15 +68,16 @@ public class BlackJackApp {
 			}
 			if (player.valueOfPlayersCards() > 21) {
 				System.out.println("Busted. You lose. ");
-				results();
+
 			}
 			if (input == 2) {
 				System.out.println("The dealers cards are: ");
 				dealer.cardsInHand();
 				System.out.println("The value of the dealers hand is: " + dealer.valueOfDealersHand());
-				System.out.println("You have chosen to stay. The value of your hand is: " + player.valueOfPlayersCards());
+				System.out
+						.println("You have chosen to stay. The value of your hand is: " + player.valueOfPlayersCards());
 				player.cardsInHand();
-				 dealersTurn();
+				dealersTurn();
 				break;
 			}
 		}
@@ -94,37 +96,34 @@ public class BlackJackApp {
 		}
 
 	}
-		public void results() {
-			if (player.valueOfPlayersCards() > dealer.valueOfDealersHand() && player.valueOfPlayersCards() < 22) {
-				System.out.println("You Win!");
-			}
-				else if (player.valueOfPlayersCards() == dealer.valueOfDealersHand()) {
-					System.out.println("Its a draw.");
-				}else {
-					System.out.println("Dealer Wins!");
-				}
-			System.out.println("Would you like to play again?");
-			System.out.println("Enter 1 for yes or Enter 2 for no.");
-			int input = sc.nextInt();
-			sc.nextLine();
-			if (input == 1) {
-				System.out.println("You have chosen to continue to play. . . ");
-				player.clearHand();
-				dealer.clearHand();
-				playBlackJack();
-			} else if (input == 2) {
-			
-				endGame();
-			}else {
-				System.out.println("Invalid input, please enter a valid input.");
-				results();
-			}
-			//results();
-		}
-		
-		public void endGame() {
-			 enterLoop = false;
-			System.out.println("You've chosen to quit, have a great day!");
-		}
-}
 
+	public void results() {
+		if (player.valueOfPlayersCards() > dealer.valueOfDealersHand() && player.valueOfPlayersCards() < 22) {
+			System.out.println("You Win!");
+		} else if (player.valueOfPlayersCards() == dealer.valueOfDealersHand()) {
+			System.out.println("Its a draw.");
+		} else {
+			System.out.println("Dealer Wins!");
+		}
+		System.out.println("Would you like to play again?");
+		System.out.println("Enter 1 for yes or Enter 2 for no.");
+		int input = sc.nextInt();
+		sc.nextLine();
+		if (input == 1) {
+			System.out.println("You have chosen to continue to play. . . ");
+			player.clearHand();
+			dealer.clearHand();
+			playBlackJack();
+		} else if (input == 2) {
+
+			endGame();
+		} else {
+			System.out.println("Invalid input, please enter a valid input.");
+		}
+	}
+
+	public void endGame() {
+		enterLoop = false;
+		System.out.println("You've chosen to quit, have a great day!");
+	}
+}

@@ -3,8 +3,8 @@ package com.skilldistillery.cards.common;
 import com.skilldistillery.cards.blackjack.BlackJackHand;
 
 public class Dealer extends Player {
+	private BlackJackHand dealersH1 = new BlackJackHand();
 	private Deck deck = new Deck();
-
 	// needs to have a deck
 	public void shuffleDeck() {
 		deck.shuffle();
@@ -29,25 +29,25 @@ public class Dealer extends Player {
 			super.cardsInHand();
 	}
 	
-	/*
-	 * public int valueMinusOne() { int dealersMinusOne = 0;
-	 * 
-	 * for (int i = 1; i < getHand().size(); i++) { dealersMinusOne +=
-	 * dealersH.getHand().get(i).getValue();
-	 * 
-	 * sysout ("dealers gethand.get(2) + gethand.get(2).getValue())
-	 *  
-	 * 
-	 * } return dealersMinusOne; }
-	 * 
-	 * public void printOutDealersHand() { for (int i = 1; i <
-	 * dealersH.getHand().size(); i++) { System.out.println(getHand().get(i));
-	 * 
-	 * }
-	 * 
-	 * 
-	 * }
-	 */
+
+	//	  public int valueMinusOne() { 
+	//	  super.cardsInHand();
+		//  int dealersMinusOne = 0;
+	  
+	//  for (int i = 1; i < dealersH1.getHand().size() ; i++) {		  
+	 // dealersMinusOne += dealersH1.hand.valueOf(i);
+	  
+	//  return  dealersH1.hand.get(i);
+	  
+	//  		} 
+	  
+	  		
+//		  }
+	
+	  
+	  }
+ 
+	  
 
 
-}
+
