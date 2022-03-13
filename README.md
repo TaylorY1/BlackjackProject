@@ -1,1 +1,19 @@
 # BlackjackProject
+
+
+### Description
+This project is designed to mimic a game of rudimentary BlackJack using the command line for prompts. Upon starting the program, you will be welcomed to the app and dealt two cards and the dealer will be dealt two cards. Then the cards you have been dealt will be displayed on the screen along with the overall value of your hand. You will also be shown what the applicable dealer's cards are. Then you will be prompted by a new menu to either Hit or Stay, depending on the rules of BlackJack and how you decide to play. Once you hit, you will be displayed the value and cards you have in your hand and prompted again to Hit or Stay. This will continue until the player (you, in this case) Busts. As soon as you choose to stay. The dealer will take their turn. They will take this turn within the rules of BlackJack, meaning as long as they are under 17, they will continue to hit. If they Hit and go over 21, they have Busted and the player wins! If they choose to stop hitting and their hand beats your hand, they will win. If you end up with the same hand value, the game will result in a tie. At the end of the game, the winner will be displayed on the screen. Once the game is over, the player will be prompted to decide if they would like to play again. If you choose to play again, the cards from the current game are added back into the deck and the game starts over. This will continue until the player decides to exit. You will be thanked for playing and the game officially ends. The game will continue until the player chooses to exit.
+
+#### Lessons Learned
+
+I learned SO many lessons throughout this project. Initially, the overall project was insanely overwhelming. Eventually, as I worked piece by piece on this project, I was able to complete it bit by bit. By taking one "baby bite" at a time, I was able to put together a working application utilizing the OO - APIE structure and applicability that is Java. This project taught me a lot. This is truly the first project in this course that made me confident in my abilities. This project showed me how far I've come in this course and how much I've learned overall from Day 1. Once I realized I could manipulate the code to do what I wanted with it, I was 1) extremely surprised and 2) confident in my abilities to design applications to my liking. This was a breakthrough project for me and has really showed me the true scope of my abilities. It also taught me to continue to remain humber as I truly feel like I realized my limitations with coding  -- this time because I finally felt like I knew what I was doing (a little bit) and fully realized what I don't know. Overall, this project showed me how much I have learned as a programmer and how much I need to learn as a programmer.
+
+
+#### Technologies Used
+
+This was the first project I used the Debugger within Eclipse to determine what exactly what was working right and what wasn't working in my project. Additionally, I used an Apple MacBook, Eclipse IDE, Google, Terminal, Zoom, Discord, my cell phone and my tiny movable man (to bounce ideas off of). Additionally, I was able to use the more nuanced technology of APIE within my Object Oriented project. Within Eclipse (or Java, rather) I used the technologies of sysout, calling methods across different classes, extending classes, eNums, Scanner, If statements, while loops and private fields.
+
+
+#### What was fun?
+
+This project was fun for me because I felt like I had some actual control over the project I was working on. This project made me realize how much I have really learned across these few short weeks in this course. Being able to see how far I have come from the beginning of the course was really fun for me. I realized how much I still need to learn, however this project showed me truly how much I have learned.
