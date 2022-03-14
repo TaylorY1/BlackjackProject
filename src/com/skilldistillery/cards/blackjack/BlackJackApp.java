@@ -124,6 +124,6 @@ public class BlackJackApp {
 
 	public void endGame() {
 		enterLoop = false;
-		System.out.println("You've chosen to quit, have a great day!");
+		System.out.println("You've chosen to quit, thank you for playing and have a great day!");
 	}
 }

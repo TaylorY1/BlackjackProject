@@ -16,4 +16,4 @@ This was the first project I used the Debugger within Eclipse to determine what 
 
 #### What was fun?
 
-This project was fun for me because I felt like I had some actual control over the project I was working on. This project made me realize how much I have really learned across these few short weeks in this course. Being able to see how far I have come from the beginning of the course was really fun for me. I realized how much I still need to learn, however this project showed me truly how much I have learned.
+This project was fun for me because I felt like I had some actual control over the project I was working on. This project made me realize how much I have really learned across these few short weeks in this course. Being able to see how far I have come from the beginning of the course was really fun for me. I realized how much I still need to learn, however this project showed me truly how much I have learned. Overall, I found this project extremely stressful but being able to manage the stress and the project was very fun for me. 
